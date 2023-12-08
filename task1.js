@@ -1,7 +1,7 @@
 
 const fs = require('fs');
 
-function log_message(filename, message, level) {
+function logMessage(filename, message, level) {
   const timestamp = new Date().toISOString();
   const logEntry = `[${timestamp}] [${level}] ${message}\n`;
   fs.appendFile(filename, logEntry, (err) => {
